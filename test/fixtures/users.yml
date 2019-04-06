@@ -27,6 +27,22 @@ malory:
   activated: true
   activated_at: <%= Time.zone.now %>
 
+password_reset:
+  name: Malory Archer
+  email: boss1@example.gov
+  password_digest: <%= User.digest('password') %>
+  reset_digest: <%= User.new_token %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
+
+activation:
+  name: Michael Example
+  email: michael1@example.com
+  password_digest: <%= User.digest('password') %>
+  activation_digest: <%= User.new_token %>
+  admin: true
+ 
+
 <% 30.times do |n| %>
 user_<%= n %>:
   name:  <%= "User #{n}" %>
@@ -34,4 +50,6 @@ user_<%= n %>:
   password_digest: <%= User.digest('password') %>
   activated: true
   activated_at: <%= Time.zone.now %>
+
+
 <% end %>
