@@ -1,0 +1,6 @@
+production:
+  cloud_name: "hv9ate50x"
+  api_key: "746715145346965"
+  api_secret: "hCUxy_k_xCd1GbGEM8UDgrS5_m8"
+  secure: true
+  cdn_subdomain: true
